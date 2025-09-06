@@ -71,10 +71,11 @@ ul {
     padding: 5px 10px;
     border-radius: 5px;
 }
-/*Estilos para el botòn de imprimir */
-.print-button-container{
-    text-align:center;
-    margin: 28px 0;
+
+/* Botón de imprimir */
+.print-button-container {
+    text-align: center;
+    margin: 20px 0;
 }
 .print-button {
     background-color: #411111;
@@ -86,12 +87,13 @@ ul {
     font-size: 16px;
     transition: background-color 0.3s;
 }
-.print-button:hover{
+.print-button:hover {
    background-color: #ff3d3d;
 }
-/*Estilos para impresion */
+
+/* Estilos para impresión */
 @media print {
-    .print-button-container{
+    .print-button-container {
         display: none;
     }
 }
