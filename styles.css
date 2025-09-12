@@ -1,26 +1,26 @@
-/* estilos generales */
+/* ==== ESTILOS GENERALES ==== */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #4e1a1a8c;
-    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
 .container {
-    width: 80%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 20px auto;
-    background: rgb(255, 255, 255);
-    padding: 20px;
-    box-shadow: 0 0 10px rgb(105, 21, 83);
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* encabezado */
+/* ==== ENCABEZADO ==== */
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .profile-pic {
@@ -28,72 +28,121 @@ header {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #000000;
+    border: 3px solid #0078d7;
+    margin-bottom: 15px;
 }
 
-h1 {
-    color: #6a1515;
-    margin: 10px 0;
+header h1 {
+    margin: 10px 0 5px;
+    font-size: 2em;
+    color: #0078d7;
 }
 
-/* secciones */
+header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* ==== BOTÓN DE IMPRIMIR ==== */
+.print-button-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.print-button {
+    background: #0078d7;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+
+.print-button:hover {
+    background: #005fa3;
+}
+
+/* ==== SECCIONES ==== */
 .section {
     margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px dashed #ffffff;
 }
 
-h2 {
-    color: #830d0d;
-    font-size: 1.3em;
+.section h2 {
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    color: #0078d7;
+    border-bottom: 2px solid #0078d7;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-h3 {
-    margin: 5px 0;
-    font-size: 1.1em;
-}
-
-/* listas */
-ul {
-    padding-left: 20px;
-}
-
-.skills {
-    list-style-type: none;
+.section ul {
+    list-style: none;
     padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 8px;
+}
+
+/* ==== ITEMS ==== */
+.item {
+    margin-bottom: 15px;
+}
+
+.item h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* ==== HABILIDADES ==== */
+.skills {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
+
 .skills li {
-    background: #b71c1c;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
+    background: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.95em;
+    color: #0078d7;
+    font-weight: bold;
 }
 
-/* Botón de imprimir */
-.print-button-container {
+/* ==== TEXTO MUTED ==== */
+.muted {
+    color: #666;
+    font-style: italic;
+}
+
+/* ==== FOOTER ==== */
+footer {
     text-align: center;
-    margin: 20px 0;
-}
-.print-button {
-    background-color: #411111;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-.print-button:hover {
-   background-color: #ff3d3d;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    font-size: 0.9em;
+    color: #555;
 }
 
-/* Estilos para impresión */
+/* ==== VERSIÓN PARA IMPRIMIR ==== */
 @media print {
+    body {
+        background: white;
+    }
+
     .print-button-container {
         display: none;
+    }
+
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
     }
 }
